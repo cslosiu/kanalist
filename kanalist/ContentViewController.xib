@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentViewController">
+            <connections>
+                <outlet property="image" destination="ppt-Cu-VYE" id="kWZ-qb-KVa"/>
+                <outlet property="kanaButton" destination="34" id="52"/>
+                <outlet property="playWordButton" destination="40" id="53"/>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="wordLabel" destination="119" id="133"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34">
+                    <rect key="frame" x="-3" y="-66" width="36" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Kana">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="playLetter:" destination="-1" eventType="touchUpInside" id="55"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40">
+                    <rect key="frame" x="76" y="466" width="168" height="53"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53" id="BcL-Di-V9o"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <state key="normal" title="Say It">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="playWord:" destination="-1" eventType="touchUpInside" id="54"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="--------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="119">
+                    <rect key="frame" x="130" y="434" width="61" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ppt-Cu-VYE">
+                    <rect key="frame" x="60" y="89" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="XYO-cg-17q"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ppt-Cu-VYE" firstAttribute="centerX" secondItem="119" secondAttribute="centerX" id="6Nh-Pp-rUZ"/>
+                <constraint firstItem="34" firstAttribute="top" secondItem="1" secondAttribute="top" constant="-66" id="DGU-RB-U4X"/>
+                <constraint firstItem="40" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="76" id="GbM-Vd-SPq"/>
+                <constraint firstItem="34" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="-3" id="JJf-ZG-MgU"/>
+                <constraint firstItem="40" firstAttribute="centerX" secondItem="119" secondAttribute="centerX" id="YbI-8N-erl"/>
+                <constraint firstItem="40" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="bak-U3-2Dj"/>
+                <constraint firstItem="ppt-Cu-VYE" firstAttribute="top" secondItem="1" secondAttribute="top" constant="89" id="kUe-ct-3u5"/>
+                <constraint firstItem="ppt-Cu-VYE" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="60" id="lWc-bS-zSC"/>
+                <constraint firstAttribute="bottom" secondItem="40" secondAttribute="bottom" constant="49" id="r5u-W2-CPk"/>
+                <constraint firstItem="40" firstAttribute="top" secondItem="119" secondAttribute="bottom" constant="8" symbolic="YES" id="zst-qX-8Ww"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
